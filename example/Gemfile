@@ -1,5 +1,5 @@
 source "https://rubygems.org"
 
-gem 'rack-log-metrics', require: 'rack/log-metrics', path: File.join(__FILE__, "../..")
+gem 'rack-http-logger', require: 'rack/http-logger', path: File.join(__FILE__, "../..")
 
 gem 'thin'

@@ -1,5 +1,5 @@
 module Rack #:nodoc:
-  class LogMetrics
+  class HTTPLogger
     VERSION = '0.0.1'
 
     def initialize(app, options = {})
@@ -7,7 +7,7 @@ module Rack #:nodoc:
 
       @stream = options[:stream] || $stdout
       @stream.sync = true unless options.fetch(:sync, true)
-      @source = options[:source] || "rack-log-metrics"
+      @source = options[:source] || "rack-http-logger"
 
       @method = options[:method] ? "#{options[:method]}".upcase : "LOG"
       @path = options[:path] || "/"
@@ -32,7 +32,7 @@ module Rack #:nodoc:
     def log(parameters)
       return if parameters.nil? or parameters.empty?
 
-      measures = flatten(parameters).collect{|keys, value| "measure.#{keys.collect(&:to_s).join('.')}=#{value}"}
+      measures = flatten(parameters).collect{|keys, value| "#{keys.collect(&:to_s).join('.')}=#{value}"}
 
       @stream.puts ["source=#{@source}", *measures].join(" ")
     end

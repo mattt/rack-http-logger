@@ -1,4 +1,4 @@
-# Rack::LogMetrics Example
+# Rack::HTTPLogger Example
 
 ## Instructions
 
