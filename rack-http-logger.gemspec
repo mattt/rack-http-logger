@@ -6,6 +6,7 @@ Gem::Specification.new do |s|
   s.name        = "rack-http-logger"
   s.authors     = ["Mattt"]
   s.email       = "mattt@me.com"
+  s.license     = 'MIT'
   s.homepage    = "https://mat.tt"
   s.version     = Rack::HTTPLogger::VERSION
   s.platform    = Gem::Platform::RUBY
