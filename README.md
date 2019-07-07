@@ -1,8 +1,18 @@
 # Rack::HTTPLogger
 
-`Rack::HTTPLogger` is Rack middleware that provides a logging endpoint for your application. HTTP request parameters are automatically formatted according to [l2met](https://github.com/ryandotsmith/l2met) and logged to a specified stream, such as `STDOUT`.
+`Rack::HTTPLogger` is Rack middleware
+that provides a logging endpoint for your application.
+HTTP request parameters are automatically formatted
+according to [l2met](https://github.com/ryandotsmith/l2met)
+and logged to a specified stream,
+such as `STDOUT`.
 
-This is designed for anyone using Heroku, which uses [Logplex](https://devcenter.heroku.com/articles/logplex) to aggregate messages for further monitoring and analytics. With `Rack::HTTPLogger` remote events such as mobile device registrations can be collected and processed into your common log stream.
+This is designed for anyone using Heroku,
+which uses [Logplex](https://devcenter.heroku.com/articles/logplex)
+to aggregate messages for further monitoring and analytics.
+With `Rack::HTTPLogger` remote events,
+such as mobile device registrations,
+can be collected and processed into your common log stream.
 
 ## Installation
 
@@ -32,12 +42,9 @@ use Rack::HTTPLogger
 
 ## Contact
 
-Mattt Thompson
-
-- http://github.com/mattt
-- http://twitter.com/mattt
-- m@mattt.me
+[Mattt](https://twitter.com/mattt)
 
 ## License
 
-Rack::HTTPLogger is available under the MIT license. See the LICENSE file for more info.
+Rack::HTTPLogger is available under the MIT license.
+See the LICENSE file for more info.
