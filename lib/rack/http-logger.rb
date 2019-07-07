@@ -1,6 +1,6 @@
 module Rack #:nodoc:
   class HTTPLogger
-    VERSION = '0.1.0'
+    VERSION = '0.1.1'
 
     def initialize(app, options = {})
       @app = app
@@ -14,11 +14,11 @@ module Rack #:nodoc:
     end
 
     def call(env)
-      return @app.call(env) unless env["REQUEST_METHOD"] == @method and env["REQUEST_PATH"] == @path
-
       request = Rack::Request.new(env)
+      
+      return @app.call(env) unless request.request_method == @method and request.path == @path
 
-      if request.media_type == "application/json" and (body = env[POST_BODY].read).length.nonzero?
+      if request.media_type == "application/json" and (body = request.body.read).length.nonzero?
         log JSON.parse(body)
       else
         log request.params
