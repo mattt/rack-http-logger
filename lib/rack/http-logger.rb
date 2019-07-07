@@ -1,6 +1,6 @@
 module Rack #:nodoc:
   class HTTPLogger
-    VERSION = '0.2.0'
+    VERSION = '0.2.1'
 
     def initialize(app, options = {})
       @app = app
