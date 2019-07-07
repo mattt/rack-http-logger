@@ -4,9 +4,9 @@ require "rack/http-logger"
 
 Gem::Specification.new do |s|
   s.name        = "rack-http-logger"
-  s.authors     = ["Mattt Thompson"]
-  s.email       = "m@mattt.me"
-  s.homepage    = "http://mattt.me"
+  s.authors     = ["Mattt"]
+  s.email       = "mattt@me.com"
+  s.homepage    = "https://mat.tt"
   s.version     = Rack::HTTPLogger::VERSION
   s.platform    = Gem::Platform::RUBY
   s.summary     = "Rack::HTTPLogger"
